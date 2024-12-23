@@ -28,9 +28,6 @@ import socket
 from PIL import Image, ImageDraw
 
 
-
-
-
 #Get the current date and time
 current_datetime = datetime.now()
 
@@ -116,9 +113,6 @@ def wtmsg():
         # speak("Say that again please...") 
         wtmsg()
 
-def stop():
-    speak("ok sir going back, is there any other work")
-
 #Send message fuction
 def sendmsg(P_No):
     speak("how do you want to send the message sir voice or type")
@@ -145,7 +139,6 @@ def sendmsg(P_No):
         pyautogui.click()
         pyautogui.press("enter")
         speak("message has been sent")
-    
 
 #Text to speech
 def speak(audio):
@@ -216,7 +209,6 @@ if __name__ == "__main__":
         query = takecommand().lower()
 
 #Logic building for tasks
-
 
 # VVVV add application you want to open
         
@@ -291,7 +283,7 @@ if __name__ == "__main__":
         elif "open instagram" in query:
             speak("okay sir opening instagram")
             os.startfile("instagram://")
-        
+
 #To play music
         elif "play music" in query or "play song" in query or "play a song" in query or "play a music" in query:
             speak("where do you want to play music sir")
@@ -438,7 +430,7 @@ if __name__ == "__main__":
                 speak("please wait sir emergency protocol activating")
                 time.sleep(10)
                 speak("sir your password are generating")
-                                
+
 #To close any application
         elif "close notepad" in query:
             speak("okay sir, closing notepad")
@@ -455,7 +447,7 @@ if __name__ == "__main__":
         elif "close whatsapp" in query:
             speak("okay sir, closing whatsapp")
             #webbrowser.("web.whatsapp.com")
-        
+
 #To set alarm
         elif "set alarm" in query:
             speak("sir how do you want to set the alarm")
@@ -476,11 +468,11 @@ if __name__ == "__main__":
         elif "tell me a joke" in query:
             joke = pyjokes.get_joke()
             speak(joke)
-        
+
 #To shutdown
         elif "shut down the system" in query:
             os.system("shutdown /s /t 5")
-        
+
 #To restart
         elif "restart the system" in query:
             os.system("shutdown /r /t 5")
@@ -616,4 +608,6 @@ if __name__ == "__main__":
             draw_image(command)
 
         #speak("sir do you have any other work")
-            
+
+def stop():
+    speak("ok sir going back, is there any other work")
