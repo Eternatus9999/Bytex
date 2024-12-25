@@ -345,6 +345,7 @@ if __name__ == "__main__":
             speak("okay sir, opening icet lms")
             webbrowser.open("https://icetlms.lk/my/")
 
+#To open google
         elif "open google" in query:
             speak("okay sir, opening google")
             speak("Sir what should i search on google")
@@ -608,6 +609,5 @@ if __name__ == "__main__":
             draw_image(command)
 
         #speak("sir do you have any other work")
-
 def stop():
     speak("ok sir going back, is there any other work")
